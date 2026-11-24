@@ -1,0 +1,33 @@
+info:
+  name: Update Product
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://localhost/angel-buyby/api/products/index.php?id=5
+  params:
+    - name: id
+      value: "5"
+      type: query
+  body:
+    type: json
+    data: |
+      
+      {
+        "category_id": 3,
+        "name": "Test API Brownies Updated",
+        "description": "Produk percobaan berhasil diperbarui melalui PUT",
+        "price": 17000,
+        "stock": 25,
+        "image": "test-api.jpg",
+        "status": "available"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

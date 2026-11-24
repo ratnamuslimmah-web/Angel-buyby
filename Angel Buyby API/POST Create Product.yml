@@ -1,0 +1,29 @@
+info:
+  name: POST Create Product
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost/angel-buyby/api/products/index.php
+  body:
+    type: json
+    data: |-
+      
+      {
+        "category_id": 3,
+        "name": "Test API Brownies",
+        "description": "Produk percobaan CRUD API Angel Buyby",
+        "price": 15000,
+        "stock": 10,
+        "image": "test-api.jpg",
+        "status": "available"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

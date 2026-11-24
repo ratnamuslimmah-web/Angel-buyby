@@ -1,0 +1,17 @@
+
+# File konfigurasi lokal
+config/database.php
+api/config/database.php
+.env
+
+# File pengujian lokal
+test-db.php
+
+# File sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Folder sementara
+tmp/
+temp/
